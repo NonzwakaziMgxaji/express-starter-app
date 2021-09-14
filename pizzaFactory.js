@@ -21,13 +21,13 @@ module.exports = function pizza() {
     function pizzaTotal(size) {
         if(size === "small"){
             smallPizza += 31.99
-            numSmallPizza+=1
+            numSmallPizza++
         } else if(size === "medium"){
             mediumPizza += 58.99
-            numMediumPizza+=1
+            numMediumPizza++
         } else if(size === "large"){
             largePizza += 87.99
-            numLargePizza+=1
+            numLargePizza++
         }
     }
 
