@@ -59,6 +59,8 @@ app.get('/', pizzaRoutes.home)
 
 app.post('/add', pizzaRoutes.addPizzas)
 
+app.get('/order', pizzaRoutes.orders)
+
 // app.post('/count', function(req, res) {
 // 	counter++;
 // 	// res.redirect('/')

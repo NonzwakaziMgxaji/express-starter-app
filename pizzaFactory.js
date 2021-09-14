@@ -7,6 +7,8 @@ module.exports = function pizza() {
     let numMediumPizza = 0;
     let numLargePizza = 0;
     let total = 0;
+    let order = [];
+    let id = 0;
 
     function pizzaSize(size){
         sizeOfPizza = size;
@@ -19,13 +21,13 @@ module.exports = function pizza() {
     function pizzaTotal(size) {
         if(size === "small"){
             smallPizza += 31.99
-            numSmallPizza++
+            numSmallPizza+=1
         } else if(size === "medium"){
             mediumPizza += 58.99
-            numMediumPizza++
+            numMediumPizza+=1
         } else if(size === "large"){
             largePizza += 87.99
-            numLargePizza++
+            numLargePizza+=1
         }
     }
 
@@ -41,9 +43,25 @@ module.exports = function pizza() {
         return largePizza.toFixed(2);;
     }
 
+   
+
     function totalAmount(){
         total = smallPizza + mediumPizza + largePizza;
-        return total.toFixed(2);
+        if(total > 0){
+            id += 1;
+
+            order.push({
+                id: id,
+                status: "payment due",
+                totalAmount: total
+            });
+        }
+        
+        return total.toFixed(2); 
+    }
+
+    function getId(){
+        return id++
     }
 
     function getNumSmallPizza(){
@@ -58,6 +76,10 @@ module.exports = function pizza() {
         return numLargePizza;
     }
 
+    function thisIsAnOrder(){
+        return order
+    }
+
     return {
         pizzaSize,
         returnPizzaSize,
@@ -68,6 +90,8 @@ module.exports = function pizza() {
         totalAmount,
         getNumSmallPizza,
         getNumMediumPizza,
-        getNumLargePizza
+        getNumLargePizza,
+        thisIsAnOrder,
+        getId
     }
 }

@@ -17,12 +17,21 @@ module.exports = function routes(pizza) {
         }
     }
 
-    async function addPizzas(req, res, next) {
+    function addPizzas(req, res, next) {
         try {
             pizza.pizzaSize(req.body.buyBtn)
             pizza.pizzaTotal(req.body.buyBtn)
-            console.log(req.body.buyBtn);
             res.redirect('/')
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    function orders(req, res, next) {
+        try {
+            res.render('order', {
+                orders: pizza.thisIsAnOrder()
+            });
         } catch (error) {
             console.log(error);
         }
@@ -30,6 +39,7 @@ module.exports = function routes(pizza) {
 
     return {
         home,
-        addPizzas
+        addPizzas,
+        orders
     }
 }
