@@ -1,21 +1,92 @@
 body {
-	background-color: greenyellow;
+	background-color: #F4F482;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.container {
+.cart {
 	margin: auto;
-	background-color: honeydew;
+	background-color: #F7EDF0;
 	width: 80%;
 	padding: 1em;
+	margin-bottom: 0.25em;
 }
 
 
 .counter {
 	background-color: lightgray;
 	font-size: 2em;
-	width: 3em;
+	/* width: 3em; */
 	text-align: center;
 	padding: 0.5em;
 	margin-bottom: 0.25em;
+}
+
+h1{
+	text-align: center;
+	/* border: 1px solid #A5ADA7; */
+	/* margin: auto; */
+}
+
+h2{
+	text-align: center;
+}
+
+.pizzaSize{
+	display: flex;
+	width: 80%;
+	background-color: #F7EDF0;
+	padding: 1em;
+	margin: auto;
+}
+
+.large{
+	padding: 1em;
+	width: 26.6%;
+	/* height: 40%; */
+	background-color: #F4CBC6;
+	margin:auto;
+
+}
+
+.medium{
+	padding: 1em;
+	width: 26.6%;
+	/* height: 40%; */
+	background-color: #F4BDB9;
+	margin:auto;
+
+}
+
+.small{
+	padding: 1em;
+	width: 26.6%;
+	/* height: 40%; */
+	background-color: #F4AFAB;
+	margin:auto;
+
+}
+
+.head{
+	width: 80%;
+	margin: auto;
+	padding-right: 1em;
+	padding-left: 1em;
+	margin-bottom: 1em;
+	border: 2px solid white;
+}
+
+input[type="submit"]{
+    background: gray;
+    padding: 0.5rem;
+    cursor: pointer;
+	border: none;
+    width: 10rem;
+    /* margin-right: 1.9rem; */
+}
+
+footer{
+	background-color: #F7EDF0;
+	width: 80%;
+	margin: auto;
+	padding: 1em;
 }
